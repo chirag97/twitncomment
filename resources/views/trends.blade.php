@@ -7,6 +7,7 @@
                 <h1>
                     Twitter Task
                 </h1>
+                <a href="/" class="btn btn-primary">Go To Home</a>
             </div>
             <hr>
             <div class="row">
@@ -22,6 +23,7 @@
 
                 <div class="col-6">
                     <h3 class="text-center"> Post a tweet now</h3>
+                    @if(session()->has('access_token'))
                     <div>
                         <form action="/twitter/profile/postTweet" method="post">
                             {{csrf_field()}}
@@ -33,6 +35,9 @@
                             </div>
                         </form>
                     </div>
+                    @else
+                    <a href="/twitter/login" class="btn btn-danger">Login To Tweet</a>
+                    @endif
                 </div>
             </div>
         </div>

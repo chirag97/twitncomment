@@ -19,6 +19,7 @@ class TwitterController extends Controller
 
     public function home()
     {
+        // dd(session()->all());
         return view('index');
     }
 

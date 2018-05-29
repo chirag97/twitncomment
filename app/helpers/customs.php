@@ -18,6 +18,8 @@ class customs
             $user = Twitter::getUsers($u);
             session()->put('logged_in_user_details', $user);
             return true;
+        }else{
+            return redirect()->route('twitter.login');
         }
     }
 

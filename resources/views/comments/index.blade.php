@@ -5,7 +5,12 @@
 
             <h1 class="text-center">
                 Commenting Home
+
             </h1>
+            <div class="text-center">
+                <a href="/" class="btn btn-primary">Go To Home</a>
+            </div>
+            <hr>
             <form action="/commenting/store" method="post">
                 {{csrf_field()}}
                 <div class="form-group">

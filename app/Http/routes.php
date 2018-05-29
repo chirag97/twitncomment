@@ -37,4 +37,5 @@ Route::get('/trends/index','TrendsController@index');
 Route::get('/trends/tweets','TrendsController@tweets');
 
 Route::get('/commenting/index','CommentsController@index');
+Route::post('/commenting/child_comment','CommentsController@addChildComment');
 Route::post('/commenting/store','CommentsController@store');
